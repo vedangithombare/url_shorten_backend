@@ -21,7 +21,7 @@ app.post('/shorten',async(req,res)=>{
         
     }catch (error){
         console.log("error: ",error);
-        res.status(500).json({error:"error shortening link"});
+        res.response(error);
     }
 });
 
