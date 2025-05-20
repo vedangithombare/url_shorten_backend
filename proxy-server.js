@@ -3,7 +3,7 @@ import cors from 'cors';
 import axios from 'axios';
 
 const app = express();
-const PORT = 5000;
+const PORT = 3001;
 const apiUrl = "https://cleanuri.com/api/v1/shorten";
 
 app.use(cors());
@@ -27,4 +27,4 @@ app.post('/shorten',async(req,res)=>{
 
 app.listen(PORT,()=>{
     console.log(`Backend server is running on port : ${PORT}`);
-})
+}) 
