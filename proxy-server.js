@@ -3,7 +3,7 @@ import cors from 'cors';
 import axios from 'axios';
 
 const app = express();
-const PORT = 3001;
+const PORT = 5000;
 const apiUrl = "https://cleanuri.com/api/v1/shorten";
 
 app.use(cors());
