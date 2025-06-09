@@ -3,7 +3,7 @@ import cors from 'cors';
 import axios from 'axios';
 
 const app = express();
-const PORT = 5000;
+const PORT = 3001;
 const apiUrl = "https://cleanuri.com/api/v1/shorten";
 
 app.use(cors());
@@ -15,7 +15,7 @@ app.post('/shorten',async(req,res)=>{
 
         const response = await axios.post(apiUrl,{url:req.body.url},{withCredentials:true});
         const data = await response.data;
-
+        
         console.log("shorten url : ", data.result_url);
         res.json({result_url: data.result_url});
         
